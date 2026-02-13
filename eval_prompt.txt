@@ -22,7 +22,7 @@
 * **Observations:** * Qualitative data must be in a table.
 * Quantitative (raw measurements) must be in a separate table.
 * Tables must be numbered and titled (e.g., *Table 1: Physical Properties*).
-
+* Qualitative descriptions are not required 
 
 * **Results/Analysis:** * Check for sample calculations (Formula -> Substitution -> Answer with units/sig figs).
 * Summary tables must be used for repetitive data.
@@ -54,7 +54,5 @@ Please provide a breakdown of the score out of **30** based on the following:
 
 **Output Format:**
 
-* **Strengths:** What did the student do well?
-* **Deductions:** List specific instances where formatting or tense rules were broken.
-* **Corrective Feedback:** Provide 2–3 specific steps for the student to improve the next report.
+* **Deductions:** List specific instances where formatting or tense rules were broken. Be specific
 * **Final Grade:** [X/30]
