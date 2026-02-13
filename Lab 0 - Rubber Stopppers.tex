@@ -145,6 +145,9 @@
 \documentclass{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
 
 % Macros for procedure flowchart auto-spacing
 \newcommand{\stepy}{0}
@@ -167,15 +170,22 @@
 \maketitle
 \section{Purpose}
 The purpose of this lab is to determine the density of two sizes of rubber stoppers and to write up a complete lab report using proper format.
+\section{Introduction}
+
+Density is a physical property that describes the relationship between the mass of a material and its volume. This property may be used to identify a meterial and can be use to compare two different materials. Density is the ratio calculated using  $\rho = \frac{m}{V}$, where $\rho$ is the density, $m$ is the mass, and $V$ is the volume. 
+
+This lab will use the displacement of water to determine the volume of the rubber stoppers, which in addition to the mass taken on a mass scale, will then be used to calculate the desnities of two rubber stoppers. This lab will explore two different methods of finding the volume of the rubber stoppers, one for each size, due to the labs constraint of not being able to use a larger graduated cylinder. The smaller rubber stopper will be measured using a graduated cylinder, while the larger rubber stopper will be measured using a beaker and a watch glass, where the change in mass of the watch glass will the be measured to determine the volume.
+
+
 \section{Materials}
 \begin{itemize}
-    \item graduated cylinder (200 mL)
-    \item two rubber stoppers (small \& large)
-    \item beaker (50 mL)
-    \item beaker (250 mL)
-    \item water
-    \item mass scale
-    \item dropper
+    \item Graduated cylinder (200 mL)
+    \item Two rubber stoppers (small \& large)
+    \item Beaker (50 mL)
+    \item Watch glass
+    \item Water
+    \item Mass scale
+    \item Dropper
 \end{itemize}
 \section{Procedure}
 % part 1
@@ -225,15 +235,15 @@ The purpose of this lab is to determine the density of two sizes of rubber stopp
         % --- Step 1: Mass of Large Rubber Stopper ---
         \lstep{Mass Scale}
         \rstep{Measured mass of large rubber stopper}
-        \rstep{Measured initial mass of 250ml beaker}
+        \rstep{Measured initial mass of watch glass}
 
         % --- Step 2: Initial Water Level in Beaker ---
         \lstep{Beaker (50 mL)}
         \rstep{Filled beaker most of the way with water}
         \rstep{Lefted enough space to move without spilling}
-        \lstep{Beaker (250 mL)}
+        \lstep{Watch Glass}
         \lstep{Beaker (50 mL)}
-        \rstep{Placed beaker (50 mL) inside beaker (250 mL)}
+        \rstep{Placed beaker (50 mL) on watch glass}
         \lstep{Dropper}
         \rstep{Used dropper to add water to beaker (50 mL) until full}
         \lstep{Large Stopper}
@@ -241,9 +251,9 @@ The purpose of this lab is to determine the density of two sizes of rubber stopp
         \lstep{Dropper}
         \rstep{Removed water from beaker (50 mL) to prevent spillage}
         \lstep{Beaker (50 mL)}
-        \rstep{Removed beaker (50 mL) from beaker (250 mL)}
+        \rstep{Removed beaker (50 mL) from watch glass}
         \lstep{Mass Scale}
-        \rstep{Measured final mass of beaker (250 mL)}
+        \rstep{Measured final mass of watch glass}
         
         % Main vertical arrow (Dynamic length based on final \stepy)
         \draw[->] (0, 0) -- (0, \stepy - 0.5);
@@ -261,14 +271,79 @@ The purpose of this lab is to determine the density of two sizes of rubber stopp
         \hline
         \textbf{Rubber Stopper Size} & \textbf{Mass (g)} & \textbf{Initial Measurement} & \textbf{Final Measurement} \\
         \hline
-        Small &  &  &  \\
+        Small & 4.33g & 15.1 mL & 16.8 mL \\
         \hline
-        Large &  &  &  \\
+        Large & 24.25g & 25.59g & 41.07g \\
         \hline
     \end{tabular}
 
 \end{table}
 
+\section{Analysis}
+\subsection{Density of Small Rubber Stopper}
 
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+    \begin{align*}
+        \text{Volume} &= \text{Final} - \text{Initial} \\
+        &= 16.8 \text{ mL} - 15.1 \text{ mL} \\
+        &= 1.7 \text{ mL} \\
+        &= 1.7 \text{ cm}^3
+    \end{align*}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    \begin{align*}
+        \text{Density} &= \frac{\text{Mass}}{\text{Volume}} \\
+        &= \frac{4.33 \text{ g}}{1.7 \text{ cm}^3} \\
+        &\approx 2.55 \text{ g/cm}^3\\
+        &\approx 2.6 \text{ g/cm}^3
+    \end{align*}
+\end{minipage}
 
+\subsection{Density of Large Rubber Stopper}
+
+Assuming the density of water is 1 g/mL.\\
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+    \begin{align*}
+        \text{Volume} &= (\text{Final Mass} - \text{Initial Mass}) \times 1 \text{ g/mL}\\
+        &= 41.07 \text{ g} - 25.59 \text{ g} \\
+        &= 15.48 \text{ g} \\
+        &= 15.48 \text{ mL} \\
+        &= 15.48 \text{ cm}^3
+    \end{align*}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    \begin{align*}
+        \text{Density} &= \frac{\text{Mass}}{\text{Volume}} \\
+        &= \frac{24.25 \text{ g}}{15.48 \text{ cm}^3} \\
+        &\approx 1.567 \text{ g/cm}^3\\
+    \end{align*}
+\end{minipage}
+\section{Discussion}
+% 1. Assuming the two rubber stoppers were made of the same material, calculate the percentage error for the method from Part 2.  Assume the result from Part 1 was the “correct” answer.
+
+% 2. One application of density determination is the ability to determine % composition of pure materials in a mixture.  Brass is one example.  Brass is made of copper & zinc.  How would the experiment be modified in order to determine the % composition of copper & zinc in brass?
+
+\begin{enumerate}
+    \item 
+     \begin{align*}
+        \text{Percentage Error} &= \left| \frac{\text{Experimental Value} - \text{Theoretical Value}}{\text{Theoretical Value}} \right| \times 100\% \\
+        &= \left| \frac{1.567 - 2.55}{2.55} \right| \times 100\% \\
+        &\approx 38.5\%
+    \end{align*}
+    
+    $\therefore$ the percentage error for the method from Part 2 is approximately 38.5\%.
+    
+    \item 
+    In order to find the percentage composition of copper and zinc in a brass sample:
+    \begin{enumerate}
+        \item Take the mass of the brass sample using a mass scale.
+        \item The volume of the brass sample would be determined using water displacement in a graduated cylinder.
+        \item The density would be calculated using the formula $\rho = \frac{m}{V}$.
+        \item The percentage composition of copper and zinc in the brass sample could be determined by using a system of equations with the known densities of pure copper and pure zinc.
+    \end{enumerate}
+\end{enumerate}
 \end{document}
