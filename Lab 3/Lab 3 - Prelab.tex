@@ -1,0 +1,171 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{import}
+
+\import{../}{labflowchart.sty}
+
+\begin{document}
+\title{SCH4U Lab: pH of Salts and Ka}
+\author{Aaron Huang}
+\date{April 28, 2026}
+\maketitle
+
+\section*{Purpose}
+\begin{enumerate}
+    \item To measure the pH of salt solutions
+    \item To determine the Ka of weak acids using pH measurements
+    \item To prepare and test a buffer solution
+\end{enumerate}
+
+\section*{Introduction}
+
+This lab explores the pH of salt solutions, the acid dissociation of weak acids, and the properties of buffer solutions. When a neutralization occurs, a salt is formed. Neutral salts form when a strong acid and a strong base react. A non-neutral salt forms when a weak acid or a weak base is involved, it exhibits either acidic or basic properties due to hydrolysis reactions in water. 
+
+Weak acids/bases only partially dissociate in aqueous solution. The strength of a weak acid or bases is quantified by its acid dissociation constant, $K_a$ or $K_b$ respectively. By measuring the pH of buffer solutions containing a weak acid/weak base and its conjugate base/acid, we can determine the $K_a$/$K_b$ value. A buffer solution resists changes in pH when small amounts of acid or base are added, making it useful in many chemical and biological applications.
+
+This lab consists of three parts. First, the pH of different salt solutions will be measured using a pH probe. Second, buffer solutions will be prepared by combining a weak acid with its conjugate base, and their pH will be recorded to calculate Ka values. Finally, the buffer's ability to resist pH changes will be tested by adding a strong base and comparing the pH change to that of pure water treated the same way.
+
+\textbf{Safety considerations:} Wear gloves at all times during this experiment, as some solutions may cause skin irritation upon direct contact.
+
+
+\section*{Procedure}
+
+\subsection*{Part 1: pH of Salt Solutions}
+
+\begin{procedureflowchart}
+    % Step 1: NaCl
+    \lstep{Beaker (100 mL)}
+    \rstep{Clean 100 mL beaker was prepared}
+    
+    \lstep{Graduated Cylinder}
+    \rstep{20.0 mL of 0.100 M NaCl solution was measured and added to beaker}
+    
+    \lstep{pH Probe}
+    \rstep{pH probe was calibrated according to manufacturer instructions}
+    \rstep{pH of NaCl solution was measured and recorded}
+    
+    \lstep{Deionized Water}
+    \rstep{pH probe was rinsed thoroughly with deionized water}
+    
+    % Steps 2 & 3: Na2CO3 and NaHSO3
+    \rstep{Procedure was repeated for 0.100 M Na$_2$CO$_3$ solution}
+    \rstep{Procedure was repeated for 0.100 M NaHSO$_3$ solution}
+    \rstep{pH probe was rinsed after each measurement}
+\end{procedureflowchart}
+
+\subsection*{Part 2: Ka of a Weak Acid}
+
+\begin{procedureflowchart}
+    % Step 1: Buffer preparation (HSO3-)
+    \lstep{Beaker (250 mL)}
+    \rstep{Clean 250 mL beaker was prepared}
+    
+    \lstep{Graduated Cylinder}
+    \rstep{20.0 mL of 0.1 M NaHSO$_3$ solution was measured and added to beaker}
+    
+    \rstep{20.0 mL of 0.100 M Na$_2$SO$_3$ solution was measured and added to beaker}
+    
+    \lstep{Glass Rod}
+    \rstep{Solution was stirred thoroughly to mix}
+    
+    \lstep{pH Probe}
+    \rstep{pH of buffer solution was measured and recorded}
+    
+    \lstep{Deionized Water}
+    \rstep{pH probe was rinsed thoroughly}
+    
+    % Step 2: Buffer preparation (CH3COO-)
+    \rstep{Procedure was repeated using CH$_3$COOH and NaCH$_3$COO solutions}
+    \rstep{pH of second buffer solution was measured and recorded}
+\end{procedureflowchart}
+
+\subsection*{Part 3: Buffer Solution Testing}
+
+\begin{procedureflowchart}
+    % Step 1: Buffer + NaOH
+    \lstep{Buffer Solution (from Part 2)}
+    \rstep{40.0 mL of NaHSO$_3$/Na$_2$SO$_3$ buffer solution from Part 2 was prepared}
+    
+    \lstep{Graduated Cylinder}
+    \rstep{10.0 mL of NaOH solution was measured and added to buffer}
+    
+    \lstep{pH Probe}
+    \rstep{Resulting pH was measured and recorded}
+    
+    % Step 2: Water + NaOH (control)
+    \lstep{Beaker}
+    \rstep{40 mL of deionized water was measured and added to clean beaker}
+    
+    \lstep{Graduated Cylinder}
+    \rstep{10.0 mL of NaOH solution was measured and added to water}
+    
+    \lstep{pH Probe}
+    \rstep{Resulting pH was measured and recorded}
+\end{procedureflowchart}
+
+\section*{Observations}
+
+\subsection*{Part 1: pH of Salt Solutions}
+
+\begin{table}[ht!]
+    \centering
+    \caption{pH Measurements of Salt Solutions}
+    \label{tab:part1-observations}
+    \vspace{0.125 in}
+    \renewcommand{\arraystretch}{2.5}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Solution} & \textbf{pH} \\
+        \hline
+        0.100 M NaCl & \\
+        \hline
+        0.100 M Na$_2$CO$_3$ & \\
+        \hline
+        0.100 M NaHSO$_3$ & \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection*{Part 2: Ka of Weak Acids}
+
+\begin{table}[ht!]
+    \centering
+    \caption{pH of Buffer Solutions}
+    \label{tab:part2-observations}
+    \vspace{0.125 in}
+    \renewcommand{\arraystretch}{2.5}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Buffer} & \textbf{Acid} & \textbf{pH} \\
+        \hline
+        NaHSO$_3$/Na$_2$SO$_3$ & HSO$_3^-$ & \\
+        \hline
+        NaCH$_3$COO/CH$_3$COOH & CH$_3$COOH & \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection*{Part 3: Buffer Capacity}
+
+\begin{table}[ht!]
+    \centering
+    \caption{pH Changes Upon Addition of NaOH}
+    \label{tab:part3-observations}
+    \vspace{0.125 in}
+    \renewcommand{\arraystretch}{2.5}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Solution} & \textbf{Initial pH} & \textbf{After 10 mL NaOH} & \textbf{pH Change} \\
+        \hline
+        Buffer (HSO$_3^-$/SO$_3^{2-}$) & & & \\
+        \hline
+        Deionized Water & & & \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\end{document}

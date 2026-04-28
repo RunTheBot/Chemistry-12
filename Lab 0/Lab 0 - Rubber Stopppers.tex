@@ -1,25 +1,12 @@
-
-
 \documentclass{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{tikz}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{multicol}
+\usepackage{import}
 
-% Macros for procedure flowchart auto-spacing
-\newcommand{\stepy}{0}
-\newcommand{\spacing}{0.75}
-\newcommand{\lstep}[1]{%
-    \pgfmathsetmacro{\newy}{\stepy - \spacing}%
-    \xdef\stepy{\newy}%
-    \draw[<-] (0, \stepy) -- (-1.5, \stepy) node[left] {#1};%
-}
-\newcommand{\rstep}[1]{%
-    \pgfmathsetmacro{\newy}{\stepy - \spacing}%
-    \xdef\stepy{\newy}%
-    \draw[<-] (0, \stepy) -- (1.5, \stepy) node[right] {#1};%
-}
+\import{../}{labflowchart.sty}
 
 \begin{document}
 \title{Lab 0 - Rubber Stoppers}
@@ -62,73 +49,47 @@ There were no special safety considerations for this experiment.
 \section{Procedure}
 % part 1
 % \subsection{Part 1: Density of Small Rubber Stopper}
-% \begin{center}
-%     \begin{tikzpicture}[line width=1pt]
+% \begin{procedureflowchart}
+%     % --- Step 1: Mass of Small Rubber Stopper ---
+%     \lstep{Mass Scale}
+%     \rstep{Mass of the small rubber stopper was measured}
 
-%         % Reset/Initialize y-offset for the flowchart
-%         \renewcommand{\stepy}{0}
+%     % --- Step 2: Initial Water Level ---
+%     \lstep{Graduated Cylinder} 
+%     \rstep{Graduated cylinder was filled to an intermediate level}
+%     \rstep{Initial water level was recorded}
 
-%         % Column Headers
-%         \node at (-3, 0.5) {\underline{Materials/Equipment}};
-%         \node at (3, 0.5) {\underline{Actions Taken}};
-
-%         % --- Step 1: Mass of Small Rubber Stopper ---
-%         \lstep{Mass Scale}
-%         \rstep{Mass of the small rubber stopper was measured}
-
-%         % --- Step 2: Initial Water Level ---
-%         \lstep{Graduated Cylinder} 
-%         \rstep{Graduated cylinder was filled to an intermediate level}
-%         \rstep{Initial water level was recorded}
-
-%         % --- Step 3: Final Water Level ---
-%         \lstep{Small stopper}
-%         \rstep{Small rubber stopper was lowered into the cylinder}
-%         \rstep{Water was stirred to remove trapped bubbles}
-%         \rstep{Final water level was recorded}
-
-%         % Main vertical arrow (Dynamic length based on final \stepy)
-%         \draw[->] (0, 0) -- (0, \stepy - 0.5);
-
-%     \end{tikzpicture}
-% \end{center}
+%     % --- Step 3: Final Water Level ---
+%     \lstep{Small stopper}
+%     \rstep{Small rubber stopper was lowered into the cylinder}
+%     \rstep{Water was stirred to remove trapped bubbles}
+%     \rstep{Final water level was recorded}
+% \end{procedureflowchart}
 % \newpage
 % \subsection{Part 2: Density of Large Rubber Stopper}
 
-\begin{center}
-    \begin{tikzpicture}[line width=1pt]
-        % Reset/Initialize y-offset for the flowchart
-        \renewcommand{\stepy}{0}
+\begin{procedureflowchart}
+    % --- Step 1: Mass of Large Rubber Stopper ---
+    \lstep{Mass Scale}
+    \rstep{Mass of the large rubber stopper was measured and recorded}
+    \rstep{Initial mass of the watch glass was measured and recorded}
 
-        % Column Headers
-        \node at (-3, 0.5) {\underline{Materials/Equipment}};
-        \node at (3, 0.5) {\underline{Actions Taken}};
-
-        % --- Step 1: Mass of Large Rubber Stopper ---
-        \lstep{Mass Scale}
-        \rstep{Mass of the large rubber stopper was measured and recorded}
-        \rstep{Initial mass of the watch glass was measured and recorded}
-
-        % --- Step 2: Initial Water Level in Beaker ---
-        \lstep{Beaker (50 mL)}
-        \rstep{Beaker was filled leaving handling clearance}
-        \rstep{Beaker was placed on the watch glass to collect overflow}
-        \lstep{Dropper}
-        \rstep{Water was added using a dropper until beaker was full}
-        \lstep{Large Stopper}
-        \rstep{Stopper was slowly and carefully lowered into the beaker}
-        \lstep{Dropper}
-        \rstep{Excess water was removed to avoid spillage}
-        \lstep{Mass Scale}
-        \rstep{Final mass of the watch glass with collected water was measured and recorded}
-        
-        % Main vertical arrow (Dynamic length based on final \stepy)
-        \draw[->] (0, 0) -- (0, \stepy - 0.5);
-    \end{tikzpicture}
-\end{center}
+    % --- Step 2: Initial Water Level in Beaker ---
+    \lstep{Beaker (50 mL)}
+    \rstep{Beaker was filled leaving handling clearance}
+    \rstep{Beaker was placed on the watch glass to collect overflow}
+    \lstep{Dropper}
+    \rstep{Water was added using a dropper until beaker was full}
+    \lstep{Large Stopper}
+    \rstep{Stopper was slowly and carefully lowered into the beaker}
+    \lstep{Dropper}
+    \rstep{Excess water was removed to avoid spillage}
+    \lstep{Mass Scale}
+    \rstep{Final mass of the watch glass with collected water was measured and recorded}
+\end{procedureflowchart}
 
 \section{Observations}
-\begin{table}[h!]
+\begin{table}[ht!]
     \centering
     \caption{Observations of Rubber Stoppers — Small}
     \label{tab:observations-small}
@@ -145,7 +106,7 @@ There were no special safety considerations for this experiment.
 
 \vspace{0.2in}
 
-\begin{table}[h!]
+\begin{table}[ht!]
     \centering
     \caption{Observations of Rubber Stoppers — Large}
     \label{tab:observations-large}

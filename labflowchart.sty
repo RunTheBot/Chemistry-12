@@ -1,0 +1,41 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{labflowchart}[2026/02/17 Lab Procedure Flowchart]
+
+\RequirePackage{tikz}
+
+% Default spacing between steps
+\newcommand{\flowspacing}{0.75}
+
+% Variable to track vertical position
+\newcommand{\stepy}{0}
+
+% Define a step on the left (Materials/Equipment)
+\newcommand{\lstep}[1]{%
+    \pgfmathsetmacro{\newy}{\stepy - \flowspacing}%
+    \xdef\stepy{\newy}%
+    \draw[<-] (0, \stepy) -- (-1.8, \stepy) node[left, text width=3cm, align=right] {#1};%
+}
+
+% Define a step on the right (Actions Taken)
+\newcommand{\rstep}[1]{%
+    \pgfmathsetmacro{\newy}{\stepy - \flowspacing}%
+    \xdef\stepy{\newy}%
+    \draw[<-] (0, \stepy) -- (1.8, \stepy) node[right, text width=5cm, align=left] {#1};%
+}
+
+% Environment for the procedure flowchart
+\newenvironment{procedureflowchart}[1][1pt]{%
+    \begin{center}
+    \begin{tikzpicture}[line width=#1]
+        % Reset/Initialize y-offset
+        \xdef\stepy{0}
+
+        % Column Headers
+        \node at (-3, 0.5) {\underline{Materials/Equipment}};
+        \node at (3, 0.5) {\underline{Actions Taken}};
+}{%
+        % Main vertical arrow (Dynamic length based on final \stepy)
+        \draw[->] (0, 0) -- (0, \stepy - 0.5);
+    \end{tikzpicture}
+    \end{center}
+}
