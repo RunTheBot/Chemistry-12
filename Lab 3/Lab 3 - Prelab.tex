@@ -15,12 +15,12 @@ Lab Partners: Maya Nasr, Arshan Shahkarami, Ryan Huang}
 \date{April 28, 2026}
 \maketitle
 
-\section*{Purpose}
-\begin{enumerate}
-    \item To measure the pH of salt solutions
-    \item To determine the Ka of weak acids using pH measurements
-    \item To prepare and test a buffer solution
-\end{enumerate}
+% \section*{Purpose}
+% \begin{enumerate}
+%     \item To measure the pH of salt solutions
+%     \item To determine the Ka of weak acids using pH measurements
+%     \item To prepare and test a buffer solution
+% \end{enumerate}
 
 \section*{Introduction}
 
@@ -169,7 +169,8 @@ Calculate the $K_b$ value of CO$_3^{2-}$ ($K_{a2} = 4.7 \times 10^{-11}$):
     \begin{align*}
         K_b &= \frac{K_w}{K_{a2}} \\
         &= \frac{1.0 \times 10^{-14}}{4.7 \times 10^{-11}} \\
-        &= 2.127659574 \times 10^{-4}
+        &= 2.127659 \times 10^{-4} \\
+        &= 2.1 \times 10^{-4}
     \end{align*}
 \end{minipage}
 
@@ -181,43 +182,45 @@ Calculate the $K_b$ value of CO$_3^{2-}$ ($K_{a2} = 4.7 \times 10^{-11}$):
         \hline
         & [CO$_3^{2-}$] & [HCO$_3^-$] & [OH$^-$] \\
         \hline
-        \textbf{I} (mol/L) & 0.1 & 0 & 0 \\
+        \textbf{I} (mol/L) & 0.100 & 0 & 0 \\
         \hline
         \textbf{C} (mol/L) & $-x$ & $+x$ & $+x$ \\
         \hline
-        \textbf{E} (mol/L) & $0.1-x$ & $x$ & $x$ \\
+        \textbf{E} (mol/L) & $0.100-x$ & $x$ & $x$ \\
         \hline
     \end{tabular}
 \end{table}
 
 \begin{equation*}
-K_b = \frac{[\text{HCO}_3^-][\text{OH}^-]}{[\text{CO}_3^{2-}]} = \frac{x^2}{0.1-x} = 2.127659574 \times 10^{-4}
+K_b = \frac{[\text{HCO}_3^-][\text{OH}^-]}{[\text{CO}_3^{2-}]} = \frac{x^2}{0.100-x} = 2.127659 \times 10^{-4}
 \end{equation*}
 
 \begin{equation*}
-x^2 + 2.127659574 \times 10^{-4}x - 2.127659574 \times 10^{-5} = 0
+x^2 + 2.127659 \times 10^{-4}x - 2.127659 \times 10^{-5} = 0
 \end{equation*}
 
-$x = [\text{OH}^-] = 4.507496108 \times 10^{-3}$ mol/L (rejecting the negative root)
+$x = [\text{OH}^-] = 4.50749 \times 10^{-3}$ mol/L $\rightarrow 4.5 \times 10^{-3}$ mol/L
 
 \vspace{0.1in}
 \noindent
 \begin{minipage}[t]{0.45\textwidth}
     \begin{align*}
-        \text{pOH} &= -\log(4.507496108 \times 10^{-3}) \\
-        &= 2.34606464
+        \text{pOH} &= -\log(4.50749 \times 10^{-3}) \\
+        &= 2.34606 \\
+        &= 2.35
     \end{align*}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.45\textwidth}
     \begin{align*}
-        \text{pH} &= 14 - 2.34606464 \\
-        &= 11.65393536
+        \text{pH} &= 14.00 - 2.34606 \\
+        &= 11.65394 \\
+        &= 11.65
     \end{align*}
 \end{minipage}
 
 \vspace{0.1in}
-$\therefore$ The predicted pH of Na$_2$CO$_3$ is 11.654 (experimental: 9.9)
+$\therefore$ The predicted pH of Na$_2$CO$_3$ is 11.65 (experimental: 9.9)
 
 \subsubsection*{NaHSO$_3$ pH Calculation}
 
@@ -233,8 +236,9 @@ $\therefore$ The predicted pH of Na$_2$CO$_3$ is 11.654 (experimental: 9.9)
 \begin{minipage}[t]{0.45\textwidth}
     \textbf{As a base:}
     \begin{align*}
-        K_b &= \frac{K_w}{K_{a1}} = \frac{10^{-14}}{1.3 \times 10^{-2}} \\
-        &= 7.692307692 \times 10^{-13}
+        K_b &= \frac{K_w}{K_{a1}} = \frac{1.0 \times 10^{-14}}{1.3 \times 10^{-2}} \\
+        &= 7.692307 \times 10^{-13} \\
+        &= 7.7 \times 10^{-13}
     \end{align*}
 \end{minipage}
 
@@ -251,11 +255,11 @@ Since $K_{a2} > K_b$, HSO$_3^-$ acts as an acid:
         \hline
         & [HSO$_3^-$] & [SO$_3^{2-}$] & [H$_3$O$^+$] \\
         \hline
-        \textbf{I} (mol/L) & 0.1 & 0 & 0 \\
+        \textbf{I} (mol/L) & 0.100 & 0 & 0 \\
         \hline
         \textbf{C} (mol/L) & $-x$ & $+x$ & $+x$ \\
         \hline
-        \textbf{E} (mol/L) & $0.1-x$ & $x$ & $x$ \\
+        \textbf{E} (mol/L) & $0.100-x$ & $x$ & $x$ \\
         \hline
     \end{tabular}
 \end{table}
@@ -263,37 +267,39 @@ Since $K_{a2} > K_b$, HSO$_3^-$ acts as an acid:
 \noindent
 \begin{minipage}[t]{0.45\textwidth}
     \textbf{Assume:} \\
-    $\frac{0.1}{6.2 \times 10^{-8}} = 1,612,903 > 1000$ \\
+    $\frac{0.100}{6.2 \times 10^{-8}} = 1.6129 \times 10^{6} > 1000$ \\
     Assumption is valid.
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.45\textwidth}
     \textbf{Verify:} \\
-    $\frac{0.1 - x}{0.1} \times 100\% = 99.9\% > 95\%$ \\
+    $\frac{0.100 - x}{0.100} \times 100\% = 99.9\% > 95\%$ \\
     Verification successful.
 \end{minipage}
 
 \begin{equation*}
-K_{a2} = \frac{[\text{SO}_3^{2-}][\text{H}_3\text{O}^+]}{[\text{HSO}_3^-]} \approx \frac{x^2}{0.1} = 6.2 \times 10^{-8}
+K_{a2} = \frac{[\text{SO}_3^{2-}][\text{H}_3\text{O}^+]}{[\text{HSO}_3^-]} \approx \frac{x^2}{0.100} = 6.2 \times 10^{-8}
 \end{equation*}
 
 \noindent
 \begin{minipage}[t]{0.45\textwidth}
     \begin{align*}
         x^2 &= 6.2 \times 10^{-9} \\
-        x &= 7.874007874 \times 10^{-5}
+        x &= 7.8740 \times 10^{-5} \\
+        &= 7.9 \times 10^{-5}
     \end{align*}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.45\textwidth}
     \begin{align*}
-        \text{pH} &= -\log(7.874007874 \times 10^{-5}) \\
-        &= 4.103804155
+        \text{pH} &= -\log(7.8740 \times 10^{-5}) \\
+        &= 4.1038 \\
+        &= 4.10
     \end{align*}
 \end{minipage}
 
 \vspace{0.1in}
-$\therefore$ The predicted pH of NaHSO$_3$ is 4.104 (experimental: 4.3)
+$\therefore$ The predicted pH of NaHSO$_3$ is 4.10 (experimental: 4.3)
 
 \subsection*{Part 2: $K_a$ Determinations and Percent Error}
 
@@ -308,19 +314,21 @@ $\therefore$ The predicted pH of NaHSO$_3$ is 4.104 (experimental: 4.3)
     \begin{align*}
         \text{p}K_a &= 6.5 \\
         K_a &= 10^{-6.5} \\
-        &= 3.16227766 \times 10^{-7}
+        &= 3.16227 \times 10^{-7} \\
+        &= 3.2 \times 10^{-7}
     \end{align*}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.45\textwidth}
     \begin{align*}
-        \% \text{ error} &= \left| \frac{3.16 \times 10^{-7} - 6.2 \times 10^{-8}}{6.2 \times 10^{-8}} \right| \times 100\% \\
-        &= 409.7\%
+        \% \text{ error} &= \left| \frac{3.16227 \times 10^{-7} - 6.2 \times 10^{-8}}{6.2 \times 10^{-8}} \right| \times 100\% \\
+        &= 409.72\% \\
+        &= 4.1 \times 10^{2}\%
     \end{align*}
 \end{minipage}
 
 \vspace{0.1in}
-$\therefore$ The experimental $K_a$ of HSO$_3^-$ is $3.16 \times 10^{-7}$ with a $409.7\%$ percent error.
+$\therefore$ The experimental $K_a$ of HSO$_3^-$ was determined to be $3.2 \times 10^{-7}$ with a $4.1 \times 10^{2}\%$ percent error.
 
 \subsubsection*{$K_a$ of CH$_3$COOH}
 
@@ -329,19 +337,21 @@ $\therefore$ The experimental $K_a$ of HSO$_3^-$ is $3.16 \times 10^{-7}$ with a
     \begin{align*}
         \text{p}K_a &= 6.6 \\
         K_a &= 10^{-6.6} \\
-        &= 2.511886432 \times 10^{-7}
+        &= 2.51188 \times 10^{-7} \\
+        &= 2.5 \times 10^{-7}
     \end{align*}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.45\textwidth}
     \begin{align*}
-        \% \text{ error} &= \left| \frac{2.512 \times 10^{-7} - 1.8 \times 10^{-5}}{1.8 \times 10^{-5}} \right| \times 100\% \\
-        &= 98.59\%
+        \% \text{ error} &= \left| \frac{2.51188 \times 10^{-7} - 1.8 \times 10^{-5}}{1.8 \times 10^{-5}} \right| \times 100\% \\
+        &= 98.604\% \\
+        &= 98.6\%
     \end{align*}
 \end{minipage}
 
 \vspace{0.1in}
-$\therefore$ The experimental $K_a$ of CH$_3$COOH is $2.51 \times 10^{-7}$ with a $98.59\%$ percent error.
+$\therefore$ The experimental $K_a$ of CH$_3$COOH was determined to be $2.5 \times 10^{-7}$ with a $98.6\%$ percent error.
 
 % \subsection*{Part 3: Buffer Solution Testing}
 
@@ -368,7 +378,7 @@ $\therefore$ The experimental $K_a$ of CH$_3$COOH is $2.51 \times 10^{-7}$ with 
 
 % \vspace{0.1in}
 % The buffer solution effectively resisted the pH change, demonstrating the capacity of the conjugate acid-base pair to neutralize added ions.
-
+\newpage
 \section*{Discussion}
 % Discussion Questions:
 % 1. Compare the predicted pH of the NaHSO3 solution with the actual experimental result (part 1). Explain any sources of error.
@@ -381,10 +391,10 @@ $\therefore$ The experimental $K_a$ of CH$_3$COOH is $2.51 \times 10^{-7}$ with 
 
 Another possibility is that the concentration of the CH$_3$COOH and NaCH$_3$COO was not accurately known. Due to the age of the solutions, significant evaporation may have occurred, increasing the concentration of the solutions and thus skewing the pH values. The discrepancy between experimental and theoretical values is likely due to a combination of these factors. 
 
-3. When a strong base, such as NaOH, was added to the HSO$_3^-$/SO$_3^{2-}$ buffer solution, the $OH^-$ ions reacted with the $H_3O^+$ ions to form water ($OH^- + H_3O^+ \rightarrow 2H_2O$). This significantly reduces the concentration of $H_3O^+$ in the solution. According to Le Chatelier's principle, the system responds to this stress by shifting the equilibrium to the right to produce more $H_3O^+$ ions and restore equilibrium. This replaces most of the $H^+$ ions that were consumed, thus stabilizing the pH. In contrast, when NaOH is added to deionized water, there is no system in place to bring the pH back towards the original value, so the pH increases significantly. 
+3. When a strong base, such as NaOH, was added to the HSO$_3^-$/SO$_3^{2-}$ buffer solution listed in Table 3, the $OH^-$ ions reacted with the $H_3O^+$ ions to form water ($OH^- + H_3O^+ \rightarrow 2H_2O$). This significantly reduced the concentration of $H_3O^+$ in the solution. According to Le Chatelier's principle, the system responded to this stress by shifting the equilibrium to the right to produce more $H_3O^+$ ions and restore equilibrium. This replaced most of the $H^+$ ions that were consumed, thus stabilizing the pH. In contrast, when NaOH was added to deionized water, there was no system in place to restore the $H_3O^+$ concentration, causing the pH to increase significantly as shown in Table \ref{tab:part3-observations}.
 
 \section*{Conclusion}
-In conclusion, this experiment measured and predicted the pH of various solutions, as well as determining the $K_a$ of HSO$_3^-$ and CH$_3$COOH. The experimental value of $K_a$ for HSO$_3^-$ was $3.16 \times 10^{-7}$ with a $409.7\%$ percent error. The experimental value of $K_a$ for CH$_3$COOH was $2.51 \times 10^{-7}$ with a $98.59\%$ percent error. 
+In conclusion, the pH of various salt solutions was measured and predicted, and the experimental $K_a$ values for HSO$_3^-$ and CH$_3$COOH were successfully determined. These findings addressed the initial purpose of evaluating hydrolysis reactions and the buffering capacity of weak acid systems.
 
 \end{document}
 

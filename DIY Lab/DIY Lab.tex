@@ -1,0 +1,105 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{import}
+\setlist{nosep}
+
+\import{../}{labflowchart.sty}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \textbf{SCH4U DIY Thesis Lab: Pre-Lab}}\\[1em]
+  {\large \textbf{A Non-Standard Cu/Zn Vinegar Cell and the Nernst Equation}}\\[0.5em]
+  {\normalsize Name: Aaron \hspace{2cm} Date: 5/29/2026}
+\end{center}
+
+\section*{Purpose}
+To compare the measured voltage of non-standard vinegar cells using copper as the inert cathode with the theoretical cell potential predicted by standard electrode potentials referenced to the SHE.
+
+\section*{Background}
+The experimental cell uses an inert copper strip as the cathode surface, while the actual reduction is hydrogen ion reduction:
+\begin{align*}
+\text{Zn}_{(s)} &\rightarrow \text{Zn}^{2+}_{(aq)} + 2\text{e}^- \\
+2\text{H}^+_{(aq)} + 2\text{e}^- &\rightarrow \text{H}_{2(g)}
+\end{align*}
+
+The standard hydrogen electrode (SHE) potential is defined as 0.00 V. Using standard reduction potentials gives the theoretical reference values:
+\begin{itemize}
+  \item Zn/Zn$^{2+}$ vs SHE: $E^\circ_{cell} = +0.76\,\text{V}$
+  \item Al/Al$^{3+}$ vs SHE: $E^\circ_{cell} = +1.66\,\text{V}$
+\end{itemize}
+
+Because vinegar is a weak acetic acid solution, the actual hydrogen ion concentration is much lower than 1.0 M. This means the measured voltage will be lower than the standard SHE-based values, and the Nernst equation can be used to explain the difference.
+
+The Nernst equation is written as:
+\[
+E_{cell} = E^\circ_{cell} - \frac{0.0592\,\text{V}}{n} \log(Q)
+\]
+
+\section*{Materials}
+\begin{itemize}
+  \item 100 mL beaker
+  \item Copper strip (electrode)
+  \item Zinc strip (electrode)
+  \item White vinegar (acetic acid solution)
+  \item Multimeter with leads
+  \item Alligator clips
+  \item Distilled water (for rinsing)
+  \item Sandpaper or steel wool (for cleaning metal strips)
+  \item Safety goggles and gloves
+\end{itemize}
+
+\section*{Procedure Flowchart}
+\begin{procedureflowchart}
+    \lstep{Clean Strips}
+    \rstep{Remove surface oxides from all metal strips using sandpaper or steel wool}
+    \lstep{Rinse \& Dry}
+    \rstep{Rinse each strip with distilled water and gently dry with a paper towel}
+    \lstep{Prepare Electrolyte}
+    \rstep{Pour approximately 50 mL of vinegar into the beaker}
+    \lstep{Insert Copper Cathode}
+    \rstep{Place the copper strip into the vinegar as the inert cathode}
+    \lstep{Insert First Anode}
+    \rstep{Place the zinc strip into the vinegar without touching the copper strip}
+    \lstep{Connect Voltmeter}
+    \rstep{Attach copper to the positive lead and zinc to the negative lead}
+    \lstep{Measure Zn Cell Voltage}
+    \rstep{Record the voltage for the copper/zinc vinegar cell}
+    \lstep{Switch Metal}
+    \rstep{Remove zinc and insert the aluminum strip in the same position}
+    \lstep{Measure Al Cell Voltage}
+    \rstep{Record the voltage for the copper/aluminum vinegar cell}
+    \lstep{Observe Cell}
+    \rstep{Note hydrogen bubble formation and electrode appearance}
+    \lstep{Cleanup}
+    \rstep{Rinse electrodes, turn off the multimeter, and dispose of vinegar safely}
+\end{procedureflowchart}
+
+\section*{Observation Table}
+\begin{tabular}{p{4cm} p{3.5cm} p{5cm}}
+\toprule
+Cell Combination & Voltage (V) & Observations \\
+\midrule
+Copper / Zinc & & \\
+Copper / Aluminum & & \\
+\bottomrule
+\end{tabular}
+
+\section*{Safety and Cleanup}
+\begin{itemize}
+  \item Wear safety goggles and gloves at all times.
+  \item Avoid direct contact with vinegar on skin and clothing.
+  \item Keep electrodes separated so they do not short circuit.
+  \item Rinse electrodes with distilled water after the experiment.
+  \item Dispose of the used vinegar according to your teacher's instructions.
+\end{itemize}
+
+\end{document}
