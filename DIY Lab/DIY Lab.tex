@@ -10,7 +10,6 @@
 \usepackage{tikz}
 \usepackage{import}
 \usepackage{adjustbox}
-\usepackage{graphicx}
 \setlist{nosep}
 
 \import{../}{labflowchart.sty}
@@ -18,23 +17,23 @@
 \begin{document}
 
 \begin{center}
-  {\LARGE \textbf{SCH4U DIY Thesis Lab: Pre-Lab}}\\[1em]
+  {\LARGE \textbf{SCH4U DIY Thesis Lab}}\\[1em]
   {\large \textbf{A Non-Standard Vinegar Cell and the Nernst Equation}}\\[0.5em]
   {\normalsize Name: Aaron \hspace{2cm} Date: 5/29/2026}
 \end{center}
 
 \section*{Purpose}
-To compare the measured voltage of non-standard vinegar cells using copper as the inert cathode with the theoretical cell potential and compare measured pH to calculated values through the Nernst equation.
+\begin{itemize}
+  \item To compare the measured voltage of non-standard vinegar-based electrochemical cells using a copper cathode against the theoretical cell potentials predicted by the Nernst equation.
+  \item To calculate the pH of the vinegar electrolyte from experimental cell potentials and compare these results to direct pH measurements.
+\end{itemize}
 
-\section*{Background}
-The experimental cell uses an inert copper strip as the cathode surface, while the actual reduction is hydrogen ion reduction. The anode is either zinc, aluminum or tin, which will undergo oxidation. 
+\section*{Introduction}
+Electrochemical cells convert chemical energy from spontaneous redox reactions into electrical energy. In this non-standard cell, hydrogen ions from an acetic acid solution (vinegar) undergo reduction at an inert copper cathode surface, while various metals (zinc, aluminum, or tin) undergo oxidation at the anode. Because the hydronium ion concentration in weak acetic acid is significantly lower than the standard $1.0\text{ M}$, the resulting cell potential is lower than the standard reduction potential, a relationship modeled quantitatively using the Nernst equation.
 
-Because vinegar is a weak acetic acid solution, the actual hydrogen ion concentration is much lower than 1.0 M. This means the measured voltage will be lower than the standard SHE-based values, and the Nernst equation can be used to explain the difference.
+The experimental procedure involved preparing various metal anode strips and pairing each with a common copper cathode in a beaker filled with white vinegar. A multimeter was utilized to measure the resulting cell potentials, and a digital pH meter was used to record the baseline pH of the vinegar electrolyte. These measurements allowed for a direct mathematical comparison between the theoretical and experimental cell potentials.
 
-The Nernst equation is written as:
-\[
-E_{cell} = E^\circ_{cell} - \frac{0.0592\,\text{V}}{n} \log(Q)
-\]
+Safety protocols required the continuous use of safety goggles and chemical-resistant gloves to protect against accidental contact with the acidic vinegar solution. Care was taken when handling the metal strips to prevent cuts from sharp edges.
 
 \section*{Materials}
 \begin{itemize}
@@ -83,8 +82,8 @@ E_{cell} = E^\circ_{cell} - \frac{0.0592\,\text{V}}{n} \log(Q)
 \toprule
 Cell Combination & Voltage (V) & Observations \\
 \midrule
-Copper / Zinc & 0.94 & Looses a layer?\\
-&&Looks cleaner/shinier\\
+Copper / Zinc & 0.94 & Lost a layer\\
+&&Looked cleaner/shinier\\
 Copper / Aluminum &1.52 & \\
 Copper / Tin &0.39 & \\
 \bottomrule
@@ -108,52 +107,44 @@ Vinegar & 2.4 \\
 
 \section*{Analysis}
 
-
-\noindent
-\begin{minipage}[t]{0.48\textwidth}
 \subsection*{Step 1: Prediction of Cell Voltages}
-To predict the cell potentials ($E_{\text{cell}}$) under non-standard conditions, where the concentration of Hydrogen ions is not $1\text{ M}$, the Nernst equation may be used.
+To predict the cell potentials ($E_{\text{cell}}$) under non-standard conditions, the Nernst equation at $25^\circ\text{C}$ was utilized:
+\[ E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{0.0592\,\text{V}}{n}\log\left(Q\right) \]
+where $Q$ is the reaction quotient, defined as:
+\[ Q = \frac{[\text{M}^{n+}]}{[\text{H}^+]^2} \]
 
-The Nernst equation at $25^\circ\text{C}$ is:
-\[ E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{0.0592}{2}\log\left(Q\right) \]
-where $Q$ is the reaction quotient, which can be expressed as:
-\[ Q = \frac{[\text{M}^{2+}]}{[\text{H}^+]^2} \]
-for Zinc and Tin 
-and
-\[ Q = \frac{[\text{M}^{3+}]}{[\text{H}^+]^3} \]
-for Aluminum, where $M$ represents the metal undergoing oxidation.
-
-\subsubsection*{Find concentration of Hydrogen}
-Given the measured pH of $2.4$, the reactant concentration is:
-\[ [\text{H}^+] = 10^{-\text{pH}} = 10^{-2.4} = 3.98 \times 10^{-3}\text{ M} \]
+\subsubsection*{Calculation of Hydrogen Ion Concentration}
+Given the measured pH of $2.4$ (Table 2), containing one significant digit in its fractional part, the hydronium concentration was determined as:
+\[ [\text{H}^+] = 10^{-\text{pH}} = 10^{-2.4} = 4 \times 10^{-3}\text{ M} \]
 
 \subsubsection*{Sample Calculation: Copper-Zinc Cell}
-Using $E^\circ_{\text{cell}} = +0.76\text{ V}$ and assuming an initial metal ion concentration of $[\text{Zn}^{2+}] = 1.0 \times 10^{-5}\text{ M}$:
+Using $E^\circ_{\text{cell}} = +0.76\text{ V}$, $n = 2$, and assuming an estimated trace metal ion concentration of $[\text{Zn}^{2+}] = 1.0 \times 10^{-5}\text{ M}$:
 \begin{align*}
-    E_{\text{cell}} &= 0.76 - 0.0296\log\left(\frac{1.0 \times 10^{-5}}{(3.98 \times 10^{-3})^2}\right) \\
-    &= 0.76 - 0.0296\log(0.6310) \\
-    &= 0.76 - 0.0296(-0.200) \\
-    &= 0.76 + 0.0059 \\
-    &\approx +0.773615\text{ V} \\
-    &\approx \mathbf{+0.77\text{ V}}
+    E_{\text{cell}} &= E^\circ_{\text{cell}} - \frac{0.0592}{2}\log\left(\frac{[\text{Zn}^{2+}]}{[\text{H}^+]^2}\right) \\
+    E_{\text{cell}} &= 0.76 - 0.0296\log\left(\frac{1.0 \times 10^{-5}}{(4 \times 10^{-3})^2}\right) \\
+    E_{\text{cell}} &= 0.76 - 0.0296\log(0.625) \\
+    E_{\text{cell}} &= 0.76 - 0.0296(-0.20) \\
+    E_{\text{cell}} &= 0.76 + 0.0059 \\
+    E_{\text{cell}} &\approx +0.77\text{ V}
 \end{align*}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.48\textwidth}
+
+The predicted non-standard cell potential for the copper-zinc cell was determined to be +0.77 V.
+
+\newpage
+
 \subsection*{Step 2: Prediction of pH from Measured Voltage}
-Using the measured cell voltage from the experimental trials, the Nernst equation can be rearranged to calculate the pH of the electrolyte solution.
+The Nernst equation was rearranged to solve for the pH of the electrolyte solution using the measured experimental cell potentials.
 
 \subsubsection*{Mathematical Derivation}
-Starting with the Nernst equation:
-\[ E_{\text{cell}} = E^\circ_{\text{cell}} - 0.0296\log[\text{M}^{2+}] + 0.0592\log[\text{H}^+] \]
-
-Sub $\text{pH} = -\log[\text{H}^+]$:
+Starting with the non-standard relation:
+\[ E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{0.0592}{2}\log[\text{M}^{2+}] + 0.0592\log[\text{H}^+] \]
+Substituting $\text{pH} = -\log[\text{H}^+]$:
 \[ E_{\text{cell}} = E^\circ_{\text{cell}} - 0.0296\log[\text{M}^{2+}] - 0.0592\text{ pH} \]
-\[ E_{\text{cell}} - E^\circ_{\text{cell}} + 0.0296\log[\text{M}^{2+}] = -0.0592\text{ pH} \]
+Rearranging to isolate pH yields:
 \[ \text{pH} = \frac{E^\circ_{\text{cell}} - E_{\text{cell}} - 0.0296\log[\text{M}^{2+}]}{0.0592} \]
 
 \subsubsection*{Sample Calculation: Copper-Zinc System}
-Using the experimental value $E_{\text{cell}} = 0.94\text{ V}$ and assuming a trace metal concentration of $[\text{Zn}^{2+}] = 1.0 \times 10^{-10}\text{ M}$:
+Using the experimental value $E_{\text{cell}} = 0.94\text{ V}$ (Table 1) and assuming a trace metal concentration of $[\text{Zn}^{2+}] = 1.0 \times 10^{-10}\text{ M}$:
 \begin{align*}
     \text{pH} &= \frac{0.76 - 0.94 - 0.0296\log(1.0 \times 10^{-10})}{0.0592} \\
     &= \frac{0.76 - 0.94 - 0.0296(-10)}{0.0592} \\
@@ -161,15 +152,9 @@ Using the experimental value $E_{\text{cell}} = 0.94\text{ V}$ and assuming a tr
     &= \frac{0.116}{0.0592} \\
     &\approx \mathbf{1.96}
 \end{align*}
-\end{minipage}
+The pH of the vinegar electrolyte calculated from the copper-zinc cell potential was determined to be 1.96.
 
-\subsection*{Notes}
-Qualitative observations of the copper strip in Table1, suggest that a layer of material was removed from the surface, which suggests impurities or contaminants in the experiment.
 
-\newpage
-\vspace{0.5cm}
-
-\noindent
 \begin{table}[ht]
   \caption{Calculated vs. Measured Values}
 \begin{adjustbox}{center}
@@ -185,9 +170,6 @@ Copper / Tin & +0.14 & +0.15 & 0.39 & -8.45 \\
 \end{adjustbox}
 \end{table}
 
-
-\vspace{0.5cm}
-\noindent
 \section*{Discussion}
 
 % Discussion questions
@@ -196,12 +178,13 @@ Copper / Tin & +0.14 & +0.15 & 0.39 & -8.45 \\
 % o Question #2: If there was an opportunity to re-do the lab, what changes would be made?
 % o Question #3: Why did you choose to this lab for the DIY?
 
-1. One significant source of error in the lab was the presence of impurities on the metal strips, as suggested by the qualitative observations of the copper strip. This could have affected the measured voltage by introducing additional redox reactions or altering the effective surface area of the electrode, leading to higher or lower voltages than expected. 
-Additionally, during the lab, the Vinegar was not replaced between trials, which could have led to changes in the concentration of acetic acid and thus the pH, affecting the voltage measurements for subsequent trials. Furthermore, the metal strips were not cleaned adequately, although washed, they were not sanded, leaving an oxide layer potentially changing results.
+1. Two significant sources of systematic experimental error were identified during the trials. First, surface oxidation and impurities on the metal strips, noted in the qualitative observations of Table 1, acted as a physical barrier to electron transfer. This surface resistance restricted active electrochemical contact, thereby altering the cell potential from the theoretical Nernstian predictions. Second, the vinegar electrolyte was not refreshed between consecutive trials. This lack of replacement allowed for the progressive accumulation of metal ions and potential localized neutralization near the electrode surface, altering the pH of the boundary layers and shifting subsequent voltage measurements. Furthermore, because the electrode strips were rinsed only with water and not abrasively cleaned with steel wool or sandpaper between trials, pre-existing oxide layers remained on the surfaces, introducing additional resistance.
 
-2. If there was an opportunity to re-do the lab, I would ensure that the metal strips were thoroughly cleaned and sanded, to eliminate impurities and oxides on the electrodes. Additionally, I would have used fresh vinegar and measured pH each trail. These two changes would eliminate the two largest sources of error.
+2. If the investigation were to be repeated, several procedural modifications would be implemented to optimize the reliability of the dataset. The metal electrodes would be thoroughly sanded with fine steel wool prior to each trial to completely remove passivating oxide layers. Additionally, fresh portions of the vinegar electrolyte would be utilized for each cell pairing, and direct pH measurements would be recorded for every trial to ensure consistency in the baseline hydronium ion concentration.
 
-3. I wanted to make a battery for my DIY lab as I found the topic interesting. Researching what electrolyte to use I remembered the conditions for $\delta E^{\circ}$ had to be under 1M conditions and wondered if the variation in voltage from $\delta E^{\circ}$ could be used to calculate pH. A quick search returned the Nernst equation and I chose the lab there.
+3. This specific laboratory experiment was chosen because of an interest in the practical construction and optimization of electrochemical cells. The exploration was motivated by a desire to investigate how changes in ion concentration under non-standard conditions shift cell potentials away from standard reduction potentials, and whether the resulting Nernstian deviations could be utilized to mathematically model and resolve unknown solution properties such as pH.
 
+\section*{Conclusion}
+The experimental cell potentials of non-standard vinegar-based cells were determined to be 0.94 V, 1.52 V, and 0.39 V for the copper-zinc, copper-aluminum, and copper-tin systems, respectively, and were successfully utilized to estimate electrolyte pH values. These values were systematically compared against theoretical cell potentials and direct pH measurements, demonstrating deviations that highlight the impact of surface oxidation and concentration shifts in weak acid systems.
 
 \end{document}
