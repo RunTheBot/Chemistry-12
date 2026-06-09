@@ -23,6 +23,12 @@
     \draw[<-] (0, \stepy) -- (1.8, \stepy) node[right, text width=5cm, align=left] {#1};%
 }
 
+% Just a blank step (no text, just vertical spacing)
+\newcommand{\bstep}[1][\flowspacing/2]{%
+    \pgfmathsetmacro{\newy}{\stepy - #1}%
+    \xdef\stepy{\newy}%
+}
+
 % Environment for the procedure flowchart
 \newenvironment{procedureflowchart}[1][1pt]{%
     \begin{center}
